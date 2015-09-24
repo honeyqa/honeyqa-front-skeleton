@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <title>Cube - Bootstrap Admin Template</title>
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" type="text/css" href="css/cube/bootstrap.min.css" />
+
+    <!-- RTL support - for demo only -->
+    <script src="js/cube/demo-rtl.js"></script>
+    <!--
+    If you need RTL support just include here RTL CSS file <link rel="stylesheet" type="text/css" href="css/libs/bootstrap-rtl.min.css" />
+    And add "rtl" class to <body> element - e.g. <body class="rtl">
+    -->
+
+    <!-- libraries -->
+    <link rel="stylesheet" type="text/css" href="css/cube/font-awesome.css" />
+    <link rel="stylesheet" type="text/css" href="css/cube/nanoscroller.css" />
+
+    <!-- global styles -->
+    <link rel="stylesheet" type="text/css" href="css/cube/theme_styles.css" />
+
+    <!-- this page specific styles -->
+    <link rel="stylesheet" href="css/cube/daterangepicker.css" type="text/css" />
+    <link rel="stylesheet" href="css/cube/jquery-jvectormap-1.2.2.css" type="text/css" />
+    <link rel="stylesheet" href="css/cube/weather-icons.css" type="text/css" />
+
+    <!-- Favicon -->
+    <link type="image/x-icon" href="favicon.png" rel="shortcut icon" />
+
+    <!-- google font libraries -->
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,600,700,300' rel='stylesheet' type='text/css'>
+
+    <!--[if lt IE 9]>
+    <script src="js/cube/html5shiv.js"></script>
+    <script src="js/cube/respond.min.js"></script>
+    <![endif]-->
+
+
+    <!-- this page specific styles -->
+    <link rel="stylesheet" type="text/css" href="css/cube/jquery.nouislider.css">
+    <link rel="stylesheet" href="css/cube/morris.css" type="text/css" />
+
+
+</head>
+<body>
+<div id="theme-wrapper">
+    <header class="navbar" id="header-navbar">
+        <div class="container">
+            <a href="index.html" id="logo" class="navbar-brand">
+                <img src="img/cube/logo.png" alt="" class="normal-logo logo-white"/>
+                <img src="img/cube/logo-black.png" alt="" class="normal-logo logo-black"/>
+                <img src="img/cube/logo-small.png" alt="" class="small-logo hidden-xs hidden-sm hidden"/>
+            </a>
+
+            <div class="clearfix">
+                <button class="navbar-toggle" data-target=".navbar-ex1-collapse" data-toggle="collapse" type="button">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="fa fa-bars"></span>
+                </button>
+
+                <div class="nav-no-collapse pull-right" id="header-nav">
+                    <ul class="nav navbar-nav pull-right">
+                        <li class="mobile-search">
+                            <a class="btn">
+                                <i class="fa fa-search"></i>
+                            </a>
+
+                            <div class="drowdown-search">
+                                <form role="search">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Search...">
+                                        <i class="fa fa-search nav-search-icon"></i>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </li>
+                        <li class="dropdown profile-dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <img src="img/cube/samples/scarlet-159.png" alt=""/>
+                                <span class="hidden-xs">Scarlett Johansson</span> <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                <li><a href="user-profile.html"><i class="fa fa-user"></i>Profile</a></li>
+                                <li><a href="#"><i class="fa fa-cog"></i>Settings</a></li>
+                                <li><a href="#"><i class="fa fa-envelope-o"></i>Messages</a></li>
+                                <li><a href="#"><i class="fa fa-power-off"></i>Logout</a></li>
+                            </ul>
+                        </li>
+                        <li class="hidden-xxs">
+                            <a class="btn">
+                                <i class="fa fa-power-off"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="page-wrapper" class="container">
+        <div class="row">
+            <div id="nav-col">
+                <section id="col-left" class="col-left-nano">
+                    <div id="col-left-inner" class="col-left-nano-content">
+                        <div id="user-left-box" class="clearfix hidden-sm hidden-xs dropdown profile2-dropdown">
+                            <img alt="" src="img/cube/samples/scarlet-159.png" />
+                            <div class="user-box">
+									<span class="name">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                            Scarlett J.
+                                            <i class="fa fa-angle-down"></i>
+                                        </a>
+										<ul class="dropdown-menu">
+                                            <li><a href="user-profile.html"><i class="fa fa-user"></i>Profile</a></li>
+                                            <li><a href="#"><i class="fa fa-cog"></i>Settings</a></li>
+                                            <li><a href="#"><i class="fa fa-envelope-o"></i>Messages</a></li>
+                                            <li><a href="#"><i class="fa fa-power-off"></i>Logout</a></li>
+                                        </ul>
+									</span>
+									<span class="status">
+										<i class="fa fa-circle"></i> Online
+									</span>
+                            </div>
+                        </div>
+                        <div class="collapse navbar-collapse navbar-ex1-collapse" id="sidebar-nav">
+                            <ul class="nav nav-pills nav-stacked">
+
+                                <!--
+                                개선 후 리스트
+                                Overview
+                                -->
+
+                                <li class="nav-header nav-header-first hidden-sm hidden-xs">
+                                    Category
+                                </li>
+
+                                <li>
+                                    <a href="overview.html">
+                                        <i></i>
+                                        <span>Overview</span>
+                                        <!--<span class="label label-primary label-circle pull-right">28</span>-->
+                                    </a>
+                                </li>
+
+                                <!--
+                                Insights(현상 유지)
+                                - Daily Error (Graph)
+                                - Rank Rating(Graph)
+                                - Recommend Error(List) (10개 단위로 표시)
+                                -->
+                                <li>
+                                    <a href="insights.html">
+                                        <i></i>
+                                        <span>Insights</span>
+                                        <!--<span class="label label-primary label-circle pull-right">28</span>-->
+                                    </a>
+                                </li>
+
+
+                                <!--
+                                Statistics
+                                - Retention(모든 카테고리 공통 배치)
+                                - App Ver.
+                                    Session
+                                    Error
+                                - Device
+                                - SDK
+                                - Country
+                                - Code
+                                    - Class
+                                    - Activity
+                                -->
+
+                                <li class="active">
+                                    <a href="#" class="dropdown-toggle">
+                                        <!--<i class="fa fa-edit"></i>-->
+                                        <span>Statistics</span>
+                                        <i class="fa fa-angle-right drop-icon"></i>
+                                    </a>
+                                    <ul class="submenu">
+                                        <li>
+                                            <a href="appver.html">
+                                                App Version
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="device.html">
+                                                Device
+                                            </a>
+                                        </li>
+                                        <li class="active">
+                                            <a href="sdk.html">
+                                                SDK
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="country.html">
+                                                Country
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="code.html">
+                                                Code
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <!--
+                                Detail
+                                - Filter & Error List
+                                -->
+                                <li>
+                                    <a href="detail.html">
+                                        <i></i>
+                                        <span>Detail</span>
+                                        <!--<span class="label label-primary label-circle pull-right">28</span>-->
+                                    </a>
+                                </li>
+
+
+                                <li>
+                                    <a href="overview.html">
+                                        <i class="fa fa-dashboard"></i>
+                                        <span>REFERENCE!</span>
+                                        <span class="label label-primary label-circle pull-right">28</span>
+                                    </a>
+                                </li>
+
+
+
+                                <li class="nav-header hidden-sm hidden-xs">
+                                    Settings
+                                </li>
+
+                                <li>
+                                    <a href="/angularjs">
+                                        <!--<i class="fa fa-google"></i>-->
+                                        <span>App Name</span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="/angularjs">
+                                        <!--<i class="fa fa-google"></i>-->
+                                        <span>Device</span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="/angularjs">
+                                        <!--<i class="fa fa-google"></i>-->
+                                        <span>App Category</span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="/angularjs">
+                                        <!--<i class="fa fa-google"></i>-->
+                                        <span>Stage</span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="/angularjs">
+                                        <!--<i class="fa fa-google"></i>-->
+                                        <span>Time Zone</span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="/angularjs">
+                                        <!--<i class="fa fa-google"></i>-->
+                                        <span>Viewer</span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#" class="dropdown-toggle">
+                                        <!--<i class="fa fa-edit"></i>-->
+                                        <span>Proguard</span>
+                                        <i class="fa fa-angle-right drop-icon"></i>
+                                    </a>
+                                    <ul class="submenu">
+                                        <li>
+                                            <a href="form-elements.html">
+                                                Proguard_upload_1
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="x-editable.html">
+                                                Proguard_upload_2
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <div id="nav-col-submenu"></div>
+            </div>
+            <div id="content-wrapper">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div id="content-header" class="clearfix">
+                                    <div class="pull-left">
+                                        <ol class="breadcrumb">
+                                            <li><a href="#">Home</a></li>
+                                            <li class="active"><span>Category</span></li>
+                                        </ol>
+
+                                        <h1>Statistics</h1>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="main-box clearfix">
+                            <header class="main-box-header clearfix">
+                                <h2>Retention</h2>
+                            </header>
+
+                            <div class="main-box-body clearfix">
+                                <div class="row" style="margin-top: -20px;">
+                                    <h3></h3>
+                                    <div class="slider-range"></div>
+                                    <span class="slider-label"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12">
+
+                        <div class="main-box">
+                            <header class="main-box-header clearfix">
+                                <h2>Error By SDK Version</h2>
+                            </header>
+                            <div class="main-box-body clearfix">
+                                <div id="graph-flot-donut" style="height: 400px; padding: 0px; position: relative;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12">
+
+                        <div class="main-box">
+                            <header class="main-box-header clearfix">
+                                <h2>Morris Bar charts</h2>
+                            </header>
+
+                            <div class="main-box-body clearfix">
+                                <div id="graph-bar222"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- global scripts -->
+<script src="js/cube/demo-skin-changer.js"></script> <!-- only for demo -->
+
+<script src="js/cube/jquery.js"></script>
+<script src="js/cube/bootstrap.js"></script>
+<script src="js/cube/jquery.nanoscroller.min.js"></script>
+
+<script src="js/cube/demo.js"></script> <!-- only for demo -->
+
+
+<script src="js/cube/jquery.nouislider.js"></script>
+
+<!-- theme scripts -->
+<script src="js/cube/scripts.js"></script>
+<script src="js/cube/pace.min.js"></script>
+<script src="js/cube/scripts.js"></script>
+<script src="js/cube/pace.min.js"></script>
+
+<!-- this page specific scripts -->
+<script src="js/cube/jquery.knob.js"></script>
+<script src="js/cube/raphael-min.js"></script>
+<script src="js/cube/morris.js"></script>
+
+
+<script src="flot/cube/jquery.flot.js"></script>
+<script src="flot/cube/jquery.flot.min.js"></script>
+<script src="flot/cube/jquery.flot.pie.min.js"></script>
+<script src="flot/cube/jquery.flot.stack.min.js"></script>
+<script src="flot/cube/jquery.flot.resize.min.js"></script>
+<script src="flot/cube/jquery.flot.time.min.js"></script>
+<script src="flot/cube/jquery.flot.orderBars.js"></script>
+
+
+<script>
+    $(document).ready(function() {
+        //range slider
+        $('.slider-range').noUiSlider({
+            range: [20, 80],
+            start: [0, 100],
+            step: 4,
+            connect: true,
+            slide: function(){
+                var values = $(this).val();
+
+                $(this).next('span').text(
+                        'range: ' + values[0] + ' - ' + values[1]
+                );
+            },
+            set: function(){
+                var values = $(this).val();
+
+                $(this).next('span').text(
+                        'range: ' + values[0] + ' - ' + values[1]
+                );
+            }
+        });
+        $('.slider-range').val([20, 80], true);
+
+    });
+</script>
+
+<script>
+    $(function() {
+
+        // bar chart
+        if ($('#graph-bar').length) {
+            var db1 = [];
+            for (var i = 0; i <= 10; i += 1) {
+                db1.push([i, parseInt(Math.random() * 30)]);
+            }
+
+            var db2 = [];
+            for (var i = 0; i <= 10; i += 1) {
+                db2.push([i, parseInt(Math.random() * 30)]);
+            }
+
+            var db3 = [];
+            for (var i = 0; i <= 10; i += 1) {
+                db3.push([i, parseInt(Math.random() * 30)]);
+            }
+
+            var series = new Array();
+
+            series.push({
+                data : db1,
+                bars : {
+                    show : true,
+                    barWidth : 0.2,
+                    order : 1,
+                    lineWidth: 1,
+                    fill: 1
+                }
+            });
+            series.push({
+                data : db2,
+                bars : {
+                    show : true,
+                    barWidth : 0.2,
+                    order : 2,
+                    lineWidth: 1,
+                    fill: 1
+                }
+            });
+            series.push({
+                data : db3,
+                bars : {
+                    show : true,
+                    barWidth : 0.2,
+                    order : 3,
+                    lineWidth: 1,
+                    fill: 1
+                }
+            });
+
+            $.plot("#graph-bar", series, {
+                colors: ['#e84e40', '#ffc107', '#8bc34a', '#03a9f4', '#9c27b0', '#90a4ae'],
+                grid: {
+                    tickColor: "#ddd",
+                    borderWidth: 0
+                },
+                shadowSize: 0
+            });
+        }
+
+
+        // graph with points - sin/cos example
+        if ($('#graph-flot-sin').length) {
+            var sin = [],
+                    cos = [];
+
+            for (var i = 0; i < 14; i += 0.5) {
+                sin.push([i, Math.sin(i)]);
+                cos.push([i, Math.cos(i)]);
+            }
+
+            var plot = $.plot("#graph-flot-sin", [
+                { data: sin, label: "sin(x)"},
+                { data: cos, label: "cos(x)"}
+            ], {
+                series: {
+                    lines: {
+                        show: true,
+                        lineWidth: 2
+                    },
+                    points: {
+                        show: true
+                    }
+                },
+                grid: {
+                    hoverable: true,
+                    clickable: true,
+                    tickColor: "#ddd",
+                    borderWidth: 0
+                },
+                yaxis: {
+                    min: -1.2,
+                    max: 1.2
+                },
+                colors: ['#e84e40', '#8bc34a', '#ffc107', '#03a9f4', '#9c27b0', '#90a4ae'],
+                shadowSize: 0
+            });
+
+            function showTooltip(x, y, contents) {
+                $("<div id='tooltip'>" + contents + "</div>").css({
+                    position: "absolute",
+                    display: "none",
+                    top: y + 5,
+                    left: x + 5,
+                    border: "1px solid #fdd",
+                    padding: "2px",
+                    "background-color": "#fee",
+                    opacity: 0.80
+                }).appendTo("body").fadeIn(200);
+            }
+
+            var previousPoint = null;
+            $("#graph-flot-sin").bind("plothover", function (event, pos, item) {
+
+                if ($("#enablePosition:checked").length > 0) {
+                    var str = "(" + pos.x.toFixed(2) + ", " + pos.y.toFixed(2) + ")";
+                    $("#hoverdata").text(str);
+                }
+
+                if ($("#enableTooltip:checked").length > 0) {
+                    if (item) {
+                        if (previousPoint != item.dataIndex) {
+
+                            previousPoint = item.dataIndex;
+
+                            $("#tooltip").remove();
+                            var x = item.datapoint[0].toFixed(2),
+                                    y = item.datapoint[1].toFixed(2);
+
+                            showTooltip(item.pageX, item.pageY,
+                                    item.series.label + " of " + x + " = " + y);
+                        }
+                    } else {
+                        $("#tooltip").remove();
+                        previousPoint = null;
+                    }
+                }
+            });
+
+            $("#graph-flot-sin").bind("plotclick", function (event, pos, item) {
+                if (item) {
+                    $("#clickdata").text(" - click point " + item.dataIndex + " in " + item.series.label);
+                    plot.highlight(item.series, item.datapoint);
+                }
+            });
+        }
+
+        // stack graph
+        if ($('#graph-flot-stacking').length) {
+            var d1 = [];
+            for (var i = 0; i <= 10; i += 1) {
+                d1.push([i, parseInt(Math.random() * 30)]);
+            }
+
+            var d2 = [];
+            for (var i = 0; i <= 10; i += 1) {
+                d2.push([i, parseInt(Math.random() * 30)]);
+            }
+
+            var d3 = [];
+            for (var i = 0; i <= 10; i += 1) {
+                d3.push([i, parseInt(Math.random() * 30)]);
+            }
+
+            var stack = 0,
+                    bars = true,
+                    lines = false,
+                    steps = false;
+
+            function plotWithOptions() {
+                $.plot("#graph-flot-stacking", [ d1, d2, d3 ], {
+                    series: {
+                        stack: stack,
+                        lines: {
+                            show: lines,
+                            fill: true,
+                            steps: steps,
+                            lineWidth: 1,
+                            fill: 1
+                        },
+                        bars: {
+                            show: bars,
+                            barWidth: 0.3,
+                            lineWidth: 1,
+                            fill: 1
+                        }
+                    },
+                    colors: ['#e84e40', '#ffc107', '#8bc34a', '#03a9f4', '#9c27b0', '#90a4ae'],
+                    grid: {
+                        tickColor: "#ddd",
+                        borderWidth: 0
+                    },
+                    shadowSize: 0
+                });
+            }
+
+            plotWithOptions();
+
+            $(".stackControls button").click(function (e) {
+                e.preventDefault();
+                stack = $(this).text() == "With stacking" ? true : null;
+                plotWithOptions();
+            });
+
+            $(".graphControls button").click(function (e) {
+                e.preventDefault();
+                bars = $(this).text().indexOf("Bars") != -1;
+                lines = $(this).text().indexOf("Lines") != -1;
+                steps = $(this).text().indexOf("steps") != -1;
+                plotWithOptions();
+            });
+        }
+
+        // donut chart
+        if ($('#graph-flot-donut').length) {
+            var dataDonut = [
+                { label: "3.0",  data: 10},
+                { label: "4.0.2",  data: 30},
+                { label: "4.1",  data: 90},
+                { label: "4.2",  data: 70},
+                { label: "5.0.1",  data: 80},
+                { label: "6.0",  data: 110}
+            ];
+
+            $.plot('#graph-flot-donut', dataDonut, {
+                series: {
+                    pie: {
+                        show: true,
+                        innerRadius: 0.5,
+                        label: {
+                            show: true,
+                        }
+                    }
+                },
+                colors: ['#e84e40', '#ffc107', '#8bc34a', '#03a9f4', '#9c27b0', '#90a4ae'],
+                legend: {
+                    show: false,
+                }
+            });
+        }
+
+        // graph with points
+        if ($('#graph-flot-points').length) {
+            var likes = [[1, 5], [2, 10], [3, 15], [4, 20],[5, 25],[6, 30],[7, 35],[8, 40],[9, 45],[10, 50],[11, 55],[12, 60],[13, 65],[14, 70],[15, 75],[16, 80],[17, 85],[18, 90],[19, 85],[20, 80],[21, 75],[22, 80],[23, 75],[24, 70],[25, 65],[26, 75],[27,80],[28, 85],[29, 90], [30, 95]];
+
+            var plot = $.plot($("#graph-flot-points"),
+                    [ { data: likes, label: "Fans"} ], {
+                        series: {
+                            lines: {
+                                show: true,
+                                lineWidth: 2,
+                                fill: true,
+                                fillColor: { colors: [ { opacity: 0.3 }, { opacity: 0.3 } ] }
+                            },
+                            points: { show: true,
+                                lineWidth: 2
+                            },
+                            shadowSize: 0
+                        },
+                        grid: { hoverable: true,
+                            clickable: true,
+                            tickColor: "#f9f9f9",
+                            borderWidth: 0
+                        },
+                        colors: ["#03a9f4"],
+                        xaxis: {ticks:6, tickDecimals: 0},
+                        yaxis: {ticks:3, tickDecimals: 0},
+                    });
+
+            function showTooltip(x, y, contents) {
+                $('<div id="tooltip">' + contents + '</div>').css( {
+                    position: 'absolute',
+                    display: 'none',
+                    top: y + 5,
+                    left: x + 5,
+                    border: '1px solid #fdd',
+                    padding: '2px',
+                    'background-color': '#dfeffc',
+                    opacity: 0.80
+                }).appendTo("body").fadeIn(200);
+            }
+
+            var previousPoint = null;
+            $("#graph-flot-points").bind("plothover", function (event, pos, item) {
+                $("#x").text(pos.x.toFixed(2));
+                $("#y").text(pos.y.toFixed(2));
+
+                if (item) {
+                    if (previousPoint != item.dataIndex) {
+                        previousPoint = item.dataIndex;
+
+                        $("#tooltip").remove();
+                        var x = item.datapoint[0].toFixed(2),
+                                y = item.datapoint[1].toFixed(2);
+
+                        showTooltip(item.pageX, item.pageY,
+                                item.series.label + " of " + x + " = " + y);
+                    }
+                }
+                else {
+                    $("#tooltip").remove();
+                    previousPoint = null;
+                }
+            });
+        }
+
+
+    });
+
+    function labelFormatter(label, series) {
+        return "<div style='font-size:8pt; text-align:center; padding:2px; color:white;'>" + label + "<br/>" + Math.round(series.percent) + "%</div>";
+    }
+</script>
+
+<script>
+    $(function($) {
+
+
+        graphBar = Morris.Bar({
+            element: 'graph-bar222',
+            data: [
+                {x: '3.0', y: 3, z: 2, a: 3},
+                {x: '4.0.2', y: 3, z: 2, a: 3},
+                {x: '4.1', y: 3, z: 2, a: 3},
+                {x: '4.2', y: 3, z: 2, a: 3},
+                {x: '5.0.1', y: 2, z: null, a: 1},
+                {x: '6.9', y: 0, z: 2, a: 4},
+            ],
+            barColors: ['#8bc34a', '#ffc107', '#e84e40', '#03a9f4', '#9c27b0', '#90a4ae'],
+            xkey: 'x',
+            ykeys: ['y', 'z', 'a'],
+            labels: ['Y', 'Z', 'A'],
+            resize: true
+        });
+    });
+
+
+</script>
+
+</body>
+</html>
